@@ -1,0 +1,50 @@
+body {
+  display:flex;
+  flex-direction:column;
+  background: #3f3939;
+  margin: 0;
+}
+main {
+  display: flex;
+  flex-flow: row;
+}
+.header {
+  display: flex;
+}
+.header > img {
+  height: 3em;
+}
+.header,
+.footer {
+  background-color: #999;
+}
+.box {
+  background-color: #444;
+  color: #fff;
+  padding: 50px;
+  font-size: 1.5em;
+}
+.nav {
+    background-color: green;
+    flex-basis: 50%;
+}
+.content {
+    background-color: red;
+    flex-basis: 50%;
+}
+.nav,
+.content {
+   min-height: calc(60vh - 70px);
+}
+
+@media all and (max-width: 600px) {
+ main  {
+  -webkit-flex-flow: column;
+          flex-flow: column;
+ }
+ .nav {
+       order:2
+ }
+].content {
+      order:1
+ }
